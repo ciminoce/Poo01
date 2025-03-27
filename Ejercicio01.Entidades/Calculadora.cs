@@ -27,7 +27,7 @@
         {
             if (Numero2!=0)
             {
-                return Numero1 / Numero2;
+                return (double) Numero1 / Numero2;
 
             }
             throw new ArgumentException("No se puede dividir por cero",nameof(Numero2));
