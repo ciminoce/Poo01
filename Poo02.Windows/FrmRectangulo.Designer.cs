@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             TxtLadoMayor = new TextBox();
             label2 = new Label();
             TxtLadoMenor = new TextBox();
             BtnOK = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -69,7 +72,7 @@
             // 
             // BtnOK
             // 
-            BtnOK.Location = new Point(36, 157);
+            BtnOK.Location = new Point(97, 155);
             BtnOK.Name = "BtnOK";
             BtnOK.Size = new Size(75, 47);
             BtnOK.TabIndex = 2;
@@ -77,18 +80,26 @@
             BtnOK.UseVisualStyleBackColor = true;
             BtnOK.Click += BtnOK_Click;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // FrmRectangulo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(269, 227);
             Controls.Add(BtnOK);
             Controls.Add(TxtLadoMenor);
             Controls.Add(TxtLadoMayor);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximumSize = new Size(285, 266);
+            MinimumSize = new Size(285, 266);
             Name = "FrmRectangulo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -100,5 +111,6 @@
         private Label label2;
         private TextBox TxtLadoMenor;
         private Button BtnOK;
+        private ErrorProvider errorProvider1;
     }
 }

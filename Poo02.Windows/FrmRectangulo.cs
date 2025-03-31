@@ -11,9 +11,49 @@ namespace Poo02.Windows
 
         private void BtnOK_Click(object sender, EventArgs e)
         {
-            Rectangulo r = new Rectangulo(int.Parse(TxtLadoMayor.Text),
-                int.Parse(TxtLadoMenor.Text));
-            r.MostrarDatos();
+            if (ValidarDatos())
+            {
+                try
+                {
+                    var ladoMayor = int.Parse(TxtLadoMayor.Text);
+                    var ladoMenor = int.Parse(TxtLadoMenor.Text);
+                    Rectangulo r = new Rectangulo(ladoMayor, ladoMenor);
+                    MessageBox.Show(r.MostrarDatos(), "Info",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    if(ex.Message.Contains("Lado menor"))
+                    {
+                        errorProvider1.SetError(TxtLadoMenor,ex.Message);
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(TxtLadoMayor, ex.Message);
+
+                    }
+                }
+            }  
+        }
+
+        private bool ValidarDatos()
+        {
+            bool valido = true;
+            errorProvider1.Clear();
+            if (!int.TryParse(TxtLadoMayor.Text, out _)){
+                valido = false;
+                errorProvider1.SetError(TxtLadoMayor, "Debe ingresar un número");
+            }
+            if (!int.TryParse(TxtLadoMenor.Text, out _))
+            {
+                valido = false;
+                errorProvider1.SetError(TxtLadoMenor, "Debe ingresar un número");
+            }
+            return valido;
         }
     }
 }

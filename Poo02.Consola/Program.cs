@@ -7,7 +7,7 @@ try
 	Console.WriteLine("Hello,Rectángulos");
 	Rectangulo r = new Rectangulo(10, 5);
 	//r.LadoMayor = 5;
-	r.MostrarDatos();
+	Console.WriteLine(r.MostrarDatos());
 }
 catch (Exception ex)
 {

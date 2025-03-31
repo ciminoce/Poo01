@@ -1,4 +1,6 @@
-﻿namespace Poo02.Entidades
+﻿using System.Text;
+
+namespace Poo02.Entidades
 {
     public class Rectangulo
     {
@@ -44,14 +46,15 @@
         {
             return LadoMayor*LadoMenor;
         }
-        public void MostrarDatos()
+        public string MostrarDatos()
         {
-            Console.WriteLine($"Rectángulo");
-            Console.WriteLine($"Lado mayor:{LadoMayor}");
-            Console.WriteLine($"Lado menor: {LadoMenor}");
-            Console.WriteLine($"Perímetro: {GetPerimetro()}");
-            Console.WriteLine($"Superficie: {GetSuperficie()}");
-
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Rectángulo");
+            sb.AppendLine($"Lado mayor:{LadoMayor}");
+            sb.AppendLine($"Lado menor: {LadoMenor}");
+            sb.AppendLine($"Perímetro: {GetPerimetro()}");
+            sb.AppendLine($"Superficie: {GetSuperficie()}");
+            return sb.ToString();
         }
     }
 }
