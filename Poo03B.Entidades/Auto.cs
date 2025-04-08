@@ -1,15 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
-namespace Poo03.Entidades
+namespace Poo03B.Entidades
 {
-    public class Auto:IValidatableObject
+    public class Auto : IValidatableObject
     {
         public Auto()
         {
             Marca = MarcaAuto.Ninguna;//valor por defecto
             Color = ColorAuto.Ninguno;//valor por defecto
-                
+
 
         }
         public Auto(MarcaAuto marca, string modelo, ColorAuto color, int anioFabricacion, string patente)
@@ -21,8 +21,8 @@ namespace Poo03.Entidades
             Patente = patente;
         }
 
-        public MarcaAuto Marca { get; set; } 
-        public string Modelo { get; set; }=null!;
+        public MarcaAuto Marca { get; set; }
+        public string Modelo { get; set; } = null!;
         public ColorAuto Color { get; set; }
         public int AnioFabricacion { get; set; }
         public string Patente { get; set; } = null!;
@@ -37,7 +37,7 @@ namespace Poo03.Entidades
         {
             string formato1 = @"^[A-Z]{3} \d{3}$";
             string formato2 = @"^[A-Z]{2} \d{3} [A-Z]{2}$";
-            return Regex.IsMatch(patente, formato1)|| Regex.IsMatch(patente,formato2);
+            return Regex.IsMatch(patente, formato1) || Regex.IsMatch(patente, formato2);
         }
         public bool EsFrabricacionPosterior2016()
         {
@@ -46,7 +46,7 @@ namespace Poo03.Entidades
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
-            if (Marca==MarcaAuto.Ninguna)
+            if (Marca == MarcaAuto.Ninguna)
             {
                 yield return new ValidationResult("El marca es requerido", new[] { nameof(Marca) });
             }
@@ -54,7 +54,7 @@ namespace Poo03.Entidades
             {
                 yield return new ValidationResult("El modelo es requerido.", new[] { nameof(Modelo) });
             }
-            if (Color==ColorAuto.Ninguno)
+            if (Color == ColorAuto.Ninguno)
             {
                 yield return new ValidationResult("El color es requerido", new[] { nameof(Color) });
             }
