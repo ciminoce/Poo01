@@ -45,6 +45,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poo04.Consola", "Poo04.Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poo04.Entidades", "Poo04.Entidades\Poo04.Entidades.csproj", "{B15FD56D-9DA0-4A51-B6C1-27672E98A3E9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilidades", "Utilidades", "{8EF297EA-CC55-45B4-8ED7-18981139F88B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilidadesConsola", "UtilidadesConsola\UtilidadesConsola.csproj", "{F5D23CAB-CF08-4E02-8AF6-A536DD297BD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,10 @@ Global
 		{B15FD56D-9DA0-4A51-B6C1-27672E98A3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B15FD56D-9DA0-4A51-B6C1-27672E98A3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B15FD56D-9DA0-4A51-B6C1-27672E98A3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5D23CAB-CF08-4E02-8AF6-A536DD297BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D23CAB-CF08-4E02-8AF6-A536DD297BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D23CAB-CF08-4E02-8AF6-A536DD297BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D23CAB-CF08-4E02-8AF6-A536DD297BD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +139,7 @@ Global
 		{6C48C1B4-6349-44B3-AF9A-C1F071FFDF9C} = {A005F2A0-D8FA-48DB-B0CC-E7AC1C17272D}
 		{A4CB1A77-C95C-4E27-99DF-CDBD1C5019A5} = {F69196AB-4802-46E6-BC16-466F63903743}
 		{B15FD56D-9DA0-4A51-B6C1-27672E98A3E9} = {F69196AB-4802-46E6-BC16-466F63903743}
+		{F5D23CAB-CF08-4E02-8AF6-A536DD297BD0} = {8EF297EA-CC55-45B4-8ED7-18981139F88B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26102FAA-0E18-4658-95BE-64031982F357}

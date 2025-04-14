@@ -7,9 +7,6 @@ namespace Poo04.Entidades
         public string NroCuenta { get; private set; } = null!;
         public string Cliente { get; private set; } = null!;
         public decimal Saldo { get; private set; }
-        public bool PermiteSobregiro { get; private set; }
-        private readonly int CantidadSobregiro = 2;
-        private readonly decimal MontoMaximoSobregiro = 20000;
         public CuentaBancaria()
         {
             
@@ -20,10 +17,9 @@ namespace Poo04.Entidades
             Cliente = cliente;
             
         }
-        public CuentaBancaria(string cuenta, string cliente, decimal saldo,bool sobreGiro=true):this(cuenta,cliente) {
+        public CuentaBancaria(string cuenta, string cliente, decimal saldo):this(cuenta,cliente) {
         
             Saldo = saldo;
-            PermiteSobregiro=sobreGiro;
         }
         public override string ToString()
         {

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Poo04.Entidades\Poo04.Entidades.csproj" />
+    <ProjectReference Include="..\UtilidadesConsola\UtilidadesConsola.csproj" />
   </ItemGroup>
 
 </Project>
